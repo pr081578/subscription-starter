@@ -4,6 +4,12 @@ const nextConfig = {
   experimental: {
     appDir: true,
     serverActions: true
+  },
+  images: {
+    domains: [
+      'files.stripe.com'
+
+    ]
   }
 };
 

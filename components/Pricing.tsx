@@ -9,6 +9,8 @@ import cn from 'classnames';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
+import Image from 'next/image';
+
 type Subscription = Database['public']['Tables']['subscriptions']['Row'];
 type Product = Database['public']['Tables']['products']['Row'];
 type Price = Database['public']['Tables']['prices']['Row'];
@@ -71,8 +73,29 @@ export default function Pricing({
       setPriceIdLoading(undefined);
     }
   };
+  return (
+    <section>
+      <div className='pt-20'>
+      <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
+              Pricing Plans
+            </h1>
+            <div className='p-8'>
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table pricing-table-id="prctbl_1NStMyEbGW3pH9XmphdElYA7"
+publishable-key="pk_test_51NSmjyEbGW3pH9XmogdRZj1qFdsz8e5LiY2d2sApN0qyME2GUY4llcwucyr425adajShxqE0KpZQLPReHgCoXtSl00bejSg197">
+</stripe-pricing-table>
 
-  if (!products.length)
+            </div>
+      
+
+      </div>
+          
+    </section>
+  
+
+  )
+}
+  {/*if (!products.length)
     return (
       <section className="bg-black">
         <div className="max-w-6xl px-4 py-8 mx-auto sm:py-24 sm:px-6 lg:px-8">
@@ -229,6 +252,7 @@ export default function Pricing({
                   <h2 className="text-2xl font-semibold leading-6 text-white">
                     {product.name}
                   </h2>
+                  <Image src={`${product.image}`} alt='Image' width={600} height={600}/>
                   <p className="mt-4 text-zinc-300">{product.description}</p>
                   <p className="mt-8">
                     <span className="text-5xl font-extrabold white">
@@ -257,7 +281,7 @@ export default function Pricing({
       </div>
     </section>
   );
-}
+}*/}
 
 function LogoCloud() {
   return (

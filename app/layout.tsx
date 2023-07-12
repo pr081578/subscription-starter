@@ -9,7 +9,7 @@ const meta = {
   description: 'Brought to you by Vercel, Stripe, and Supabase.',
   cardImage: '/og.png',
   robots: 'follow, index',
-  favicon: '/favicon.ico',
+  favicon: '/logo.png',
   url: 'https://subscription-starter.vercel.app',
   type: 'website'
 };
